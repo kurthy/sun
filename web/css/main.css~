@@ -1,0 +1,2101 @@
+/* Reset CSS
+Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.6.0
+*/
+
+/*
+Fonts CSS
+Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.6.0
+*/
+body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}select,input,button,textarea{font:99% arial,helvetica,clean,sans-serif;outline: none;}table{font-size:inherit;font:100%;}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
+
+a
+{
+  color: #524F46;
+  outline: none;
+}
+
+body
+{
+  font: 14px "Lucida Grande", Lucida, Verdana, sans-serif;
+  background-color: #828f95;
+}
+
+#container
+{
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff url(../images/bg-page.png) bottom repeat-x;
+}
+
+#header
+{
+  background: url(../images/bg-header.jpg) repeat-x top;
+}
+
+#header h1
+{
+  height: 110px;
+  width: 783px;
+  margin: 0 auto;
+}
+
+#header h1 a {
+  display: block;
+  width: 150px;
+  height: 110px;
+  background: url(../images/logo.jpg) no-repeat;
+}
+
+
+#header h1 img
+{
+  display: none;
+}
+
+#header .post
+{
+  float: right;
+  margin-top: -66px;
+  margin-right: 40px;
+}
+
+#sub_header .search input
+{
+  background: url(../images/button-search.jpg) no-repeat;
+  text-indent: -9999px;
+  border: 0;
+  width: 95px;
+  height: 40px;
+  margin-left: 10px;
+}
+
+#sub_header .search input:hover
+{
+  background-position: left -40px;
+}
+
+#sub_header .search input:active
+{
+  background-position: left -80px;
+}
+
+#sub_header .search input#search_keywords
+{
+  font-size: 160%;
+  padding: 8px 10px;
+  line-height: 1.5em;
+  margin-bottom: 3px;
+  margin-left: 0px;
+  width: 579px;
+  height: 27px;
+  border: 0;
+  background: url(../images/search-box.jpg);
+  text-indent: 0;
+  color: #666;
+}
+
+#sub_header .post h2
+{
+  display: none;
+}
+
+#sub_header .post div a
+{
+  display: block;
+  background: url(../images/button-post.jpg);
+  text-indent: -9999px;
+  width: 150px;
+  height: 48px;
+}
+
+#sub_header .post div a:hover
+{
+  background-position: left -50px;
+}
+
+#sub_header .post div a:active
+{
+  background-position: left -100px;
+}
+
+
+#sub_header
+{
+  background: url(../images/bg-subheader.gif) bottom;
+  width: 783px;
+  height: 128px;
+  margin: 0 auto;
+}
+
+#sub_header .search
+{
+  padding: 15px 35px;
+}
+
+#sub_header h2
+{
+  text-indent: -9999px;
+}
+
+#sub_header .search h2
+{
+  background: url(../images/header-job.jpg) no-repeat;
+  height: 23px;
+  width: 250px;
+  margin-bottom: 7px;
+  margin-top: 5px;
+}
+
+#content .content {
+  width: 783px;
+  margin: 0 auto;
+  font-size: 2em;
+}
+
+#content h1
+{
+  margin-top: 10px;
+  margin-bottom: 1px;
+  padding: 0px 15px;
+  font-size: 124%;
+  text-transform: uppercase;
+  background: url(../images/bg-listheader.gif) no-repeat;
+  line-height: 32px;
+  color: #fff;
+}
+
+#content h1 a
+{
+  color: #fff;
+  text-decoration: none;
+  font-style: normal;
+  text-transform: uppercase;
+  line-height: 32px;
+}
+
+#footer
+{
+  margin-top: 60px;
+  font-size: 90%;
+  margin-bottom: 0px;
+  height: 153px;
+  background: url(../images/bg-footer.jpg) repeat-x bottom;
+  padding-top: 10px;
+  position: relative;
+}
+
+#footer .content {
+  width: 783px;
+  margin: 0 auto;
+}
+
+#footer a
+{
+  color: #77766F;
+}
+
+#footer ul
+{
+  display: inline;
+}
+
+#footer li
+{
+  list-style: none;
+  margin-right: 15px;
+  display: inline;
+}
+
+#footer li a
+{
+  text-decoration: none;
+}
+
+#footer li a:hover
+{
+  color: #000;
+  text-decoration: underline;
+}
+
+#footer .symfony,
+#footer .centresource
+{
+  font-family: arial,sans-serif;
+  font-size: 80%;
+  float: right;
+  color: #666;
+}
+
+#footer .centresource
+{
+  clear: both;
+  margin-top: 5px;
+  padding-bottom: 10px;
+  position: relative;
+  bottom: -30px;
+  right: 5%;
+  color: #adbcc3;
+  font-size: 90%;
+}
+
+#footer .centresource a
+{
+  color: #b2c0c6;
+  text-decoration: none;
+}
+
+#footer .centresource a:hover
+{
+  color: #fff;
+}
+
+#footer .symfony img
+{
+  vertical-align: middle;
+}
+
+#footer form {
+  margin: 10px 0;
+  color: #5f6364;
+}
+
+.feed
+{
+  padding-left: 20px;
+  background: transparent url(../images/feed.png) no-repeat 0 0;
+}
+
+.help
+{
+  color: #B5B5B5;
+  font-size: 80%;
+  font-style: italic;
+}
+
+.help strong
+{
+  color: black;
+  text-transform: uppercase;
+  font-size: 1.3em;
+}
+
+.help b
+{
+  color: white;
+  font-size: 1em;
+}
+
+
+.search .help {
+  color: #fff;
+}
+
+.error_list
+{
+/*  color: red; */
+}
+
+strong
+{
+  font-weight: bold;
+}
+
+.hrubo
+{
+  font-weight: bold;
+}
+
+
+em
+{
+  font-style: italic;
+}
+
+.flash_notice
+{
+  margin: 3px 0;
+  padding: 7px;
+  background-color: #cfc;
+}
+
+.flash_error
+{
+  margin: 3px 0;
+  padding: 7px;
+  background-color: #f33;
+/*  color: #fff; */
+}
+
+
+#job_history
+{
+  width: 740px;
+  margin: 0 auto;
+  padding: 7px;
+  font-size: 80%;
+  color: #5d6162;
+}
+
+#job_history a
+{
+  color: #5d6162;
+}
+
+#job_history ul
+{
+  display: inline;
+}
+
+#job_history li
+{
+  margin-right: 10px;
+  display: inline;
+}
+
+#job_form {
+  width: 760px;
+  margin: 0 auto;
+}
+
+#job_form .radio_list label {
+  margin-right: 15px;
+}
+
+
+#job_form th
+{
+  white-space: nowrap;
+  font-style: italic;
+}
+
+#job_form td, #job_form th
+{
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
+  text-align: left;
+  vertical-align: top;
+  padding: 7px;
+}
+
+#job_form tfoot td, #job_form tfoot th
+{
+  border: 0;
+  text-align: right;
+}
+
+#job_form .radio_list li
+{
+  display: inline;
+}
+
+
+#fkopinion .radio_list li
+{
+  display: inline;
+}
+
+
+/**** menu *****/
+
+#menu {
+/*  position:relative; */
+/*  z-index:100; */
+border: 0;
+margin: 0;
+padding: 0 0 30px 0;
+float: none;
+/* display: inline; */
+}
+
+#menu #nav {
+  /*background-image: url('../images/bg_menu_inactive.png');*/
+  border: 0;
+  width: 100%;
+}
+
+#menu #nav .dropdown {
+    background: none;
+    background-color: #648864;
+}
+
+ul.dropdown {
+ font-weight: normal;
+
+}
+ul.dropdown li {
+ width: 220px;
+}
+
+ul.dropdown a:link,
+ul.dropdown a:visited   { color: white; text-decoration: none; }
+ul.dropdown a:hover     { color: white; text-decoration: underline; }
+ul.dropdown a:active    { color: #020202; }
+
+ul.dropdown ul {
+  width: 137px;   /* 160 changed to 137, later to 116px  @author AK   */
+  margin-top: 0px;
+}
+
+ul.dropdown ul li {
+  font-weight: normal;
+
+}
+
+  ul.dropdown li, ul.dropdown li.dir {
+/*    padding: 7px 10px; */
+    border-style: solid;
+    border-width: 0 0px 0 0px;
+/*    border-left: 2px solid;*/
+/*    border-color: #c9ef50 #99cc00 #fff #668603;*/
+    border-color: none #91090c none #91090c;
+    background-color: #648864; 
+    color: white;
+    min-width: 7em;  /* from 13em changed to 10em, @author AK */
+    min-height: 1.5em;
+/*vertical-align: bottom;*/
+/*    text-align: center;*/
+    text-transform: uppercase;
+    font-size: 8pt;
+  }
+
+    ul.dropdown li:hover,
+    ul.dropdown li.dir:hover {
+      background-color: #7ACC7A ;
+/*      background-image: url('../images/bg_menu_active.png');*/
+      color: white;
+      border-color: none #000 none #000;
+      font-weight: normal;
+    }
+
+    ul.dropdown li.dir {
+/*      background: none;*/
+      background-color: #648864;
+/*      background-image: url('../images/bg_menu_inactive.png');*/
+    }
+
+    ul.dropdown li.dir ul li {
+      background: none;
+      background-color: #648864;
+      text-align: left;
+      border-top: dashed 1px #CCCCCC;
+    }
+
+    ul.dropdown li.dir ul li:hover {
+/*      background-color: #1b1b1b;*/
+      background-color: #7ACC7A;
+    }
+
+    ul.dropdown li:visited {
+      color: yellow;
+/*      background-image: url('../images/bg_menu_active.png');*/
+    }
+
+.image_add {
+  vertical-align: text-bottom;
+}
+
+/*nasl. class je v _form_field_for_embedded.php */
+.content-of-embedded {
+  /*background-color: red;*/
+  
+}
+
+/**
+ * SM, 27.04.2010
+ * see sfWidgetFormFilterDate in lib/filter/doctrine/ZoologyFormFilter.class.php
+ */
+#filter_date_range {
+  margin: 0;
+  padding: 0;
+}
+#filter_date_range td {
+  vertical-align: bottom;
+}
+.foot {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.foot table
+{
+ width: 100%;  
+} 
+
+
+.foot td
+{
+ border: none;  
+} 
+
+.foot td .symfonak
+{
+ border: none;  
+ padding: 20px;
+} 
+
+.foot td .nowrap
+{
+ white-space: nowrap;
+ border: none;  
+ background-color: red;
+
+} 
+
+
+#sf_fieldset_person table {
+  background-color: white;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+
+}
+
+#sf_fieldset_detail table  {
+  background-color: white;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+
+}
+
+.telo  /* in layout */
+{
+  font-size: 0.75em;	
+  background-color: #F5FFE6; 
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 0px;
+  padding-bottom: 1px;
+}
+
+#wrappermenu
+{
+ width: 100%;
+ margin: 0 auto;
+ background-color: #648864;
+
+
+}
+#beLeft {
+  float: left;
+  width: 1em;
+}
+
+/**
+ * filter choose yes/no
+ *
+ * @author AK
+ */
+#beRight  
+{
+  float: right;
+  width: 19em;
+   
+}
+
+/**
+ * dialog person_modal
+ *
+ * @author AK
+ */
+#external_lkpprojectname, #external_person 
+{
+ background-color: #D6FF99;
+ border: 1px solid;
+}
+
+
+
+/**
+ * form aves:  new edit, minidialog boxes 
+ *
+ * @author AK
+ */
+#ak_container
+{
+
+/*  background-image: url(../images/bannerAves.jpg); */
+  background-image: url(../images/bannerAves.gif);
+  background-repeat: no-repeat;
+  background-position: top center;
+  min-width: 950px;                 /* needed by settings in sfguard, if not, banner overlap*/
+
+}
+/**
+ *  sfguard action settings table id, move the table "center"  
+ *
+ * @author AK
+ */
+#ak_container .setting 
+{
+  width: 70%;
+  margin-left: 150px;
+  margin-top: 10px;
+}
+
+#ak_container .setting label
+{
+   width: 88%;
+  
+}
+/**
+ *  center the objects  
+ *
+ * @author AK
+ */
+#ak_container #wrapper
+{
+ width: 880px;
+ margin: 0 auto;
+}
+
+#ak_container a
+{
+  color: #464646;
+  text-decoration: none;
+}
+
+#ak_container a:hover
+{
+  color: #000;
+  text-decoration: underline;
+}
+
+
+/**
+ * padding-top to not overlap banner  
+ *
+ * @author AK
+ */
+#ak_container h1
+{
+  margin: 0;
+  padding: 0;
+  padding-top: 95px; 
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#ak_container th, .minidialog_container th 
+{
+  white-space: nowrap;
+  background-color: #7ACC7A;
+}
+
+#ak_container td, .minidialog_container td 
+{
+  background-color: #EBFFCC;
+}
+
+
+#ak_container td, #ak_container th,  .minidialog_container td,  .minidialog_container th 
+{
+  text-align: left;
+  vertical-align: top;
+  border: 0;
+}
+
+/**
+ * embed form label
+ *
+ * embed forms are in table tr th td 
+ */
+#ak_container th label, .minidialog_container th label 
+{
+  padding-right: 40px;
+  padding-left: 3px;
+  display: block; 
+  margin-left: 4px; 
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: #D6FF99;
+  color: #324432;
+
+}
+
+#ak_container tr, .minidialog_container tr 
+
+{
+  background-color: #fff;
+}
+
+#ak_container ul.error_list
+{
+  margin: 0;
+  margin-bottom: 7px;
+  color: #d33;
+  border: none;
+  background-color: #f33;
+}
+
+#ak_container ul.error_list li
+{
+  padding: 4px;
+  padding-left: 25px;
+  list-style: none;
+  color: #fff;
+  background: url(../images/error.png) no-repeat 4px 4px;
+}
+
+#ak_container tr:hover
+{
+  background-color: #ffe;
+}
+
+#ak_container input, #ak_container textarea
+{
+ /**
+  * enable set size of input fields
+  * 
+  */
+  width: auto; 
+}
+
+#ak_container .radio_list, #ak_container .checkbox_list
+{
+  margin: 0;
+}
+
+#ak_container .radio_list li, #ak_container .checkbox_list li
+{
+  list-style: none;
+  display: inline;
+}
+
+#ak_container .double_list_select, #ak_container .double_list_select-selected
+{
+  width: 12em;
+}
+
+#ak_container .double_list_label
+{
+  font-weight: bold;
+}
+
+#ak_container tfoot td
+{
+  margin: 0;
+  list-style: none;
+  text-align: right;
+}
+
+#ak_container thead img, #ak_container tfoot img
+{
+  vertical-align: middle;
+}
+
+#ak_bar
+{
+  float: right;
+  margin-left: 20px;
+}
+
+.ak_pagination
+{
+  float: right;
+}
+
+#ak_container ul.ak_td_actions
+{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#ak_container ul.ak_td_actions li
+{
+  list-style-type: none;
+  display: inline;
+  margin-right: 10px;
+  font-size: 90%;
+}
+
+#ak_container ul.ak_actions
+{
+  margin: 10px 0;
+  list-style-type: none;
+}
+
+#ak_container ul.ak_actions li
+{
+  list-style-type: none;
+  display: inline;
+  margin-right: 10px;
+}
+
+#ak_container ul li a
+{
+  padding-left: 20px;
+  background: url(../images/default.png) no-repeat 0 0;
+}
+
+#ak_container ul li.ak_action_new a
+{
+  background: url(../images/new.png) no-repeat 0 0;
+}
+
+#ak_container ul li.ak_action_delete a
+{
+  background: url(../images/delete.png) no-repeat 0 0;
+}
+
+#ak_container ul li.ak_action_list a
+{
+  background: url(../images/list.png) no-repeat 0 0;
+}
+
+#ak_container ul li.ak_action_edit a
+{
+  background: url(../images/feder.png) no-repeat 0 0;
+}
+
+#ak_container .notice
+{
+  margin: 4px 0;
+  padding: 4px 4px 4px 30px;
+  background: url(../images/tick.png) no-repeat 10px 4px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #ffc;
+/* SM, 23.05.2010, >>> */
+  font-weight: bold;
+  font-size: 12pt;
+/* SM, 23.05.2010, <<< */
+}
+
+#ak_container .error
+{
+  margin: 4px 0;
+  padding: 4px 4px 4px 30px;
+  background: url(../images/error.png) no-repeat 10px 4px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #f33;
+  color: #fff;
+}
+
+#ak_container .ak_row_0 td
+{
+}
+
+#ak_container .ak_row_1 td
+{
+/*  background-color: #eee;*/
+}
+
+#ak_container fieldset h2, .minidialog_container fieldset h2 
+{
+  padding: 3px;
+  color: #333;
+  background-color: #ccf;
+  font-size: 11px;
+}
+
+#ak_container fieldset, .minidialog_container fieldset
+{
+  margin-top: 5px;
+  border-bottom: 0px;
+  background-color: #F5FFE6; 
+  width : 950px;
+}
+
+#ak_container fieldset.collapsed *, .minidialog_container fieldset.collapsed * { display:none; }
+#ak_container fieldset.collapsed h2, #ak_container fieldset.collapsed, .minidialog_container fieldset.collapsed h2, .minidialog_container fieldset.collapsed { display:block !important; }
+#ak_container fieldset.collapsed .collapse-toggle, .minidialog_container fieldset.collapsed .collapse-toggle { display: inline !important; }
+#ak_container fieldset.collapse h2 a.collapse-toggle { color:#ffc; }
+#ak_container fieldset.collapse h2 a.collapse-toggle:hover { text-decoration:underline; }
+
+#ak_container label, .minidialog_container label
+{
+  font-weight: bold;
+  background-color: #D6FF99;
+  color: #324432;
+  margin-left: 4px; 
+  display: block; 
+  padding-right: 40px;
+  padding-left: 3px;
+
+}
+
+
+#ak_container ul label, #ak_container td label, .minidialog_container ul label, .minidialog_container td label
+{
+  display: inline;
+  float: none !important;
+}
+
+#ak_container .ak_form_row
+{
+  clear: both;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+#ak_container .ak_form_row .content
+{
+  padding-left: 9em;
+}
+
+#ak_container .help
+{
+  padding-left: 9em;
+  color: #aaa;
+}
+
+#ak_container td .help
+{
+  padding-left: 0;
+}
+
+#ak_container .errors input, #ak_container .errors select
+{
+  border: 1px solid #f22;
+}
+
+#ak_container .ak_list .ak_boolean
+{
+  text-align: center;
+}
+
+#ak_container #zoology_zoology_geom {
+   background-color: #D6DFC9;
+   color: #98AA7D;
+}
+#ak_container #map {
+  background-color: #D6FF99;
+}
+#ak_container .labelField, .minidialog_container .labelField
+ {
+  padding: 3px 0px 3px 0;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: #D6FF99;
+
+}
+#ak_container  #labelFieldTitle, .minidialog_container #labelFieldTitle
+{
+  padding: 3px 0px 3px 0;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: none ;
+  background-color: #D6FF99;
+}
+
+
+#ak_container  #labelFieldTitle label, .minidialog_container #labelFieldTitle label
+
+{
+  border: none;
+  text-transform: uppercase; 
+}
+
+#ak_container  #labelFieldTitleList
+{
+  padding: 3px 0px 3px 0;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: none ;
+  background-color: #BCE954;
+}
+
+
+#ak_container  #labelFieldTitleList label
+
+{
+  border: none;
+  text-transform: uppercase; 
+  background-color: #BCE954;
+
+}
+
+#ak_container table #contentList  
+{
+  padding: 15px 0px 15px 0;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom:  1px solid black;
+
+  background-color: #C3FDB8;
+
+}
+
+#ak_container table .persons
+{
+    border-collapse: collapse;
+}
+
+/* embed table spacing, .. no result */
+#ak_container  .persons  {
+/*
+  background-color: #EBFFCC;
+
+  border-collapse: collapse;
+  border: 1px solid;
+  background-color: red;
+  height: 15px;  
+
+*/
+}
+
+#ak_container .localisationFieldset
+{
+  position:relative;
+  left: 0;
+  top: 0;
+  width: 950px;
+}
+#ak_container .localisationFieldset table
+{
+  margin-top: 8px;
+  margin-left: 2px;
+}
+#ak_container .localisationFieldset label
+{
+  background-color: #D6FF99; 
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+
+}
+
+ 
+#ak_container .localisationFieldset .labelField, .minidialog_container .labelField
+{
+  background-color: #7ACC7A;
+}
+ 
+#ak_container .localisationFieldset td  
+{
+  background-color: #EBFFCC;
+}
+
+#ak_container .localisationFieldset .content  
+{
+  background-color: #EBFFCC;
+  padding-bottom: 8px;
+  padding-left: 4px;
+  padding-right: 3px;
+  padding-top: 8px;
+  border: 1px solid;
+  border-collapse: collapse;
+
+}
+
+#ak_container .detailsFieldset table
+{
+  margin-top: 8px;
+  margin-left: 2px;
+}
+#ak_container .detailsFieldset table table tr
+{
+}
+
+
+#ak_container .detailsFieldset .content  
+{
+  background-color: #EBFFCC;
+  padding-bottom: 8px;
+  padding-left: 4px;
+  padding-right: 3px;
+  padding-top: 8px;
+  border: 1px solid;
+}
+
+
+
+/**
+ * list design  
+ *
+ * origin - web/sfDoctringePlugin/css/default.css
+ */
+#sf_admin_container
+{
+/*  background-image: url(../images/bannerAves.jpg); */
+  background-image: url(../images/bannerAves.gif);
+  background-repeat: no-repeat;
+  background-position: top center;
+  min-width: 950px;
+}
+
+
+#sf_admin_container a
+{
+  color: #464646;
+  text-decoration: none;
+}
+
+#sf_admin_container #about a
+{
+  color: blue;
+  text-decoration: underline;
+
+}
+
+
+#sf_admin_container a:hover
+{
+  color: #000;
+  text-decoration: underline;
+}
+
+#sf_admin_container h1
+{
+  margin: 0;
+  padding: 0;
+  padding-top: 95px; /* if not, banner overlap  */
+  margin-bottom: 20px;
+}
+#sf_admin_container h1 #normal
+{
+  font-size: 0.8em;
+  font-weight: none;
+
+}
+#sf_admin_container th
+{
+  background-color: #D6FF99;
+  white-space: nowrap;
+}
+
+#sf_admin_container td, #sf_admin_container th
+{
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  text-align: left;
+  vertical-align: top;
+}
+
+#sf_admin_container tr
+{
+  background-color: #EBFFCC;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+#sf_admin_container ul.error_list
+{
+  margin: 0;
+  margin-bottom: 7px;
+  color: #d33;
+  border: none;
+  background-color: #f33;
+}
+
+#sf_admin_container ul.error_list li
+{
+  padding: 4px;
+  padding-left: 25px;
+  list-style: none;
+  color: #fff;
+  background: url(../images/error.png) no-repeat 4px 4px;
+}
+
+#sf_admin_container tr:hover
+{
+  background-color: #ffe;
+}
+
+#sf_admin_container input, #sf_admin_container textarea
+{
+  width: auto;
+}
+
+#sf_admin_container .radio_list, #sf_admin_container .checkbox_list
+{
+  margin: 0;
+}
+
+#sf_admin_container .radio_list li, #sf_admin_container .checkbox_list li
+{
+  list-style: none;
+  display: list-item;
+}
+
+#sf_admin_container .double_list_select, #sf_admin_container .double_list_select-selected
+{
+  width: 12em;
+}
+
+#sf_admin_container .double_list_label
+{
+  font-weight: bold;
+}
+
+#sf_admin_container tfoot td
+{
+  margin: 0;
+  list-style: none;
+  text-align: right;
+}
+
+#sf_admin_container thead img, #sf_admin_container tfoot img
+{
+  vertical-align: middle;
+}
+
+#sf_admin_bar
+{
+  float: none;
+  margin-left: 20px;
+}
+
+.sf_admin_pagination
+{
+  float: right;
+}
+
+
+
+#sf_admin_container ul.sf_admin_td_actions
+{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#sf_admin_container ul.sf_admin_td_actions li
+{
+  list-style-type: none;
+  display: inline;
+  margin-right: 10px;
+  font-size: 90%;
+}
+
+#sf_admin_container ul.sf_admin_actions
+{
+  margin: 10px 0;
+  list-style-type: none;
+}
+
+#sf_admin_container ul.sf_admin_actions li
+{
+  list-style-type: none;
+  display: inline;
+  margin-right: 10px;
+}
+
+#sf_admin_container ul li a
+{
+  padding-left: 20px;
+  background: url(../images/default.png) no-repeat 0 0;
+}
+
+#sf_admin_container ul li.sf_admin_action_new a
+{
+  background: url(../images/new.png) no-repeat 0 0;
+}
+
+#sf_admin_container ul li.sf_admin_action_delete a
+{
+  background: url(../images/delete.png) no-repeat 0 0;
+}
+
+#sf_admin_container ul li.sf_admin_action_list a
+{
+  background: url(../images/list.png) no-repeat 0 0;
+}
+
+#sf_admin_container ul li.sf_admin_action_edit a
+{
+  background: url(../images/pierko.png) no-repeat 0 0;
+}
+
+#sf_admin_container ul li.sf_admin_action_show a
+{
+  background: url(../images/listGreen.png) no-repeat 0 0;
+}
+
+#sf_admin_container ul li.sf_admin_action_notebook a
+{
+  background: url(../images/notepad.png) no-repeat 0 0;
+}
+
+#sf_admin_container .notice
+{
+  margin: 4px 0;
+  padding: 4px 4px 4px 30px;
+  background: url(../images/tick.png) no-repeat 10px 4px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #ffc;
+}
+
+#sf_admin_container .error
+{
+  margin: 4px 0;
+  padding: 4px 4px 4px 30px;
+  background: url(../images/error.png) no-repeat 10px 4px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #f33;
+  color: #fff;
+}
+
+#sf_admin_container .sf_admin_row_0 td
+{
+}
+
+#sf_admin_container .sf_admin_row_1 td
+{
+/*  background-color: #eee;*/
+}
+
+#sf_admin_container fieldset h2
+{
+  padding: 3px;
+  color: #333;
+  background-color: #ccf;
+  font-size: 11px;
+  margin: 0;
+}
+
+#sf_admin_container fieldset
+{
+  margin-bottom: 3px;
+  border: 1px solid #ddd;
+  border-bottom: 0px;
+  background-color: #fff;
+}
+
+#sf_admin_container fieldset.collapsed * { display:none; }
+#sf_admin_container fieldset.collapsed h2, #sf_admin_container fieldset.collapsed { display:block !important; }
+#sf_admin_container fieldset.collapsed .collapse-toggle { display: inline !important; }
+#sf_admin_container fieldset.collapse h2 a.collapse-toggle { color:#ffc; }
+#sf_admin_container fieldset.collapse h2 a.collapse-toggle:hover { text-decoration:underline; }
+
+#sf_admin_container label
+{
+  display: block;
+  padding: 0 1em 3px 0;
+  float: left;
+  text-align: left;
+  width: 8em;
+  color: #666;
+  font-weight: normal !important;
+}
+
+#sf_admin_container ul label, #sf_admin_container td label
+{
+  display: inline;
+  float: none !important;
+}
+
+#sf_admin_container .sf_admin_form_row
+{
+  clear: both;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+#sf_admin_container .sf_admin_form_row .content
+{
+  padding-left: 9em;
+}
+
+#sf_admin_container .help
+{
+  padding-left: 9em;
+  color: #aaa;
+}
+
+#sf_admin_container td .help
+{
+  padding-left: 0;
+}
+
+#sf_admin_container .errors input, #sf_admin_container .errors select
+{
+  border: 1px solid #f22;
+}
+
+#sf_admin_container .sf_admin_list .sf_admin_boolean
+{
+  text-align: center;
+}
+
+#bcshow
+{
+  background-image: url(../images/notebook2.jpg);
+  background-repeat: repeat-y;
+  background-position:left top;
+  border: 1px solid;
+  width: 1010px;
+  min-height: 400px;
+  font-size: 1.3em;
+}
+
+#bcshowTable
+{
+
+  background-color:white;
+  border: 1px solid;
+  width: 1010px;
+  min-height: 400px;
+  font-size: 1.3em;
+}
+
+#bcshowTable table
+{
+  width: 100%;
+}
+#bcshowTable #wrapper 
+{
+  width: 860px;
+  margin: 45px auto 25px 70px;
+  text-align: left;
+}
+#bcshow #wrapper 
+{
+  width: 860px;
+  margin: 45px auto 25px 70px;
+  text-align: left;
+}
+#bcshow #showDate
+{
+  font-size: 1.7em;
+}
+
+#bcshow #showDatePosition
+{
+  float: left;
+}
+
+#bcshow #showLocality
+{
+  margin-left: 260px;
+  width: 650px;
+  height: 280px;	
+}
+#bcshow #showLocality .showBig
+{
+  font-size: 1.7em; 
+}
+#showLocCadastre
+{
+  margin-top: 9px;
+}
+
+
+#bcshow #showMap
+{
+  float: left; 
+  position: relative; 
+  text-align: left;
+  width:470px;
+  height:107px;
+  padding: 80px 0 40px 0px;
+}
+
+#bcshow #showMap .showMapImage
+{
+  float: left; 
+  padding-right: 5px;
+}
+
+
+
+#bcshow #showMap .showMapImage #showMapButton
+{
+  float: left;
+  left: 10px;
+}
+
+#bcshow #showObservers
+{
+  width: 350px;
+  padding: 70px 0px 4px 15px;
+  float: right;
+}
+
+#bcshow #showObservers #showObserversText
+{
+  text-align: justify;
+  padding-left: 60px;
+}
+
+#bcshow #showObservers #showObserversImage
+{
+  float: right;
+  padding-left: 35px;
+}
+#bcshow #showDescr
+{
+  float: right; 
+  margin: 3px;
+  margin-top: 13px
+  padding: 2px 4px 2px 4px;
+  background-color: #FFFFCC;
+  max-width: 500px; 
+}
+
+#showDetailsText
+{
+  margin: 15px 10px 3px 50px;
+}
+
+#bcshow #showDetailsText .showBig
+{
+  font-size: 1.4em; 
+}
+
+#bcshow #showCompl
+{
+  text-align: center;
+  margin-top: 35px;
+}
+#bcshow #right
+{
+  text-align: right;
+  margin-top: 35px;
+  font-size: 1em;
+
+}
+#bcshow #left span
+{
+  font-size: 1.4em; 
+
+}
+
+#bcshow #showCompl span
+{
+  font-size: 1.4em; 
+
+}
+
+p.hidden
+{
+ color:red;
+ font-weight: bold;
+
+}
+
+#showOneSpecies 
+{
+  margin-bottom: 25px;
+  border-bottom: 0.1em dotted blue;
+}
+
+#showDetailsImage 
+{
+  padding-top: 55px;
+}
+
+#note
+{
+  margin: 0 10px;
+  padding: 0 5px 0 5px;
+  background-color: #FFFFCC;
+  
+}
+
+
+/*
+ * SM, 20.05.2010
+ */
+.labelField LABEL
+{
+  font-size: 12pt;
+}
+.labelField LABEL,
+.content LABEL
+{
+  font-size: 11pt;
+}
+#zoology_zoology_geom
+{
+/*display: none;*/
+}
+.labelField #map
+{
+/*vertical-align: middle;*/
+/*width: 80%;*/
+text-decoration: underline;
+color: blue;
+margin-left: auto;
+margin-right: auto;
+padding: 0 5px 0 5px; 
+}
+.labelField #map:hover
+{
+/*vertical-align: middle;*/
+/*width: 80%;*/
+text-decoration: underline;
+color: red;
+margin-left: auto;
+margin-right: auto;
+}
+.detail_druhy
+{
+  width: 100%;
+}
+.detail_druhy tr
+{
+  width: 100%;
+}
+.detail_druhy tr td
+{
+  padding: 0;
+  padding-left: 10px;
+white-space: nowrap;
+/*display: table;*/
+
+}
+
+#userinfo
+{
+  height: 45px;
+  float: right;
+}
+
+#addproject
+{
+  background-image: url('../images/tag_blue_add.png');
+  background-color: #F5FFE6;
+  background-repeat: no-repeat;
+  background-position: center left;
+  text-align: right;
+  text-indent: 20px;
+  height: 25px;
+}
+
+/**
+ * qtip dialog 
+ *
+ * http://craigsworks.com/projects/qtip/docs/reference/#content
+ */
+
+.qtip-title
+{
+/*   font-size: 1.6em; */
+   font-size: 1.4em;
+}
+.qtip-title .showBig
+{
+/*  font-size: 1.4em; */
+  font-size: 1.2em; 
+
+}
+
+.qtip-content
+{
+/*   font-size: 1.5em; */
+   font-size: 1.3em;
+}
+
+#warning
+{
+  font-size: 1.7em;
+  color: red;
+  background-color: yellow;
+  max-width: 700px; 
+}
+
+.blueFont
+{
+  text-color: blue;
+  font-weight: bold;
+
+}
+
+#fk1
+{
+  font-size: 1em;
+  color: black;
+  background-color: yellow;
+
+}
+#fk2
+{
+  font-size: 1em;
+  color: blue;
+}
+#fk3
+{
+  font-size: 1em;
+  color: red;
+}
+#fk4
+{
+  font-size: 1em;
+  color: purple;
+}
+
+#FKiconSended
+{
+  background-color: red;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-top: 4px;
+}
+
+#FKiconProcessed
+{
+  background-color: orange;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-top: 4px;
+
+}
+
+#FKiconAccepted
+{
+  background-color: lightgreen;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-top: 4px;
+
+}
+
+
+
+/* sf_admin_container change the table background more green, this sf_user_container not, only banner and h1 are OK */
+#sf_user_container
+{
+  background-image: url(../images/bannerAves.gif);
+  background-repeat: no-repeat;
+  background-position: top center;
+  min-width: 950px;
+}
+
+#sf_user_container h1
+{
+  margin: 0;
+  padding: 0;
+  padding-top: 95px; /* if not, banner overlap  */
+  margin-bottom: 20px;
+}
+
+#whitetable table {
+  background-color: white;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+
+#whitetable th {
+  background-color: white;
+
+}
+
+#whitetable td {
+  background-color: white;
+}
+
+#lightgreentable table {
+  background-color: #f5ffe6; /* #828f95; */
+  border: none;
+}
+
+#lightgreentable th {
+  background-color: #f5ffe6;
+  border: none;
+}
+
+#lightgreentable td {
+  background-color: #f5ffe6;
+  border: none;
+}
+
+
+
+#fkwrapper
+{
+ background-color: white;
+ width: 970px;
+ margin: 0 auto;
+}
+
+.tableShow th
+{
+ text-align: center;
+ border-right:1px dotted black;
+ border-bottom:1px solid black;
+
+}
+
+.tableShow td
+{
+ border-bottom:1px dotted black;
+
+}
+
+.even td
+{
+ background-color:  #EBFFCC; 
+}
+
+.trbc2 th
+{
+ background-color: #EBFFCC;
+}
+
+
+.trbc2 td
+{
+ background-color: #EBFFCC;
+}
+
+.tblnotthick td
+{
+    padding: 0 0 0 0;
+    outline: 0px ;
+    border: 0px;
+}
+
+.tblhelp 
+{
+  background-color: white;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 0 0 0 0;
+  outline: 0px ;
+  border-collapse: collapse;
+}
+input[id*="_female"]
+{
+  border-color: #FF2B2B;
+  border-width: 3px;
+}
+
+input[id*="_male"]
+{
+  border-color: blue;
+  border-width: 3px;
+}
+
+
+input[id*="about"]
+{
+  border-color: gray;
+  border-width: 3px;
+}
+
+input[id*="unknown"]
+{
+  border-color: gray;
+  border-width: 3px;
+}
+
+input[id*="_add"]
+{
+  border-color: orange;
+  border-width: 3px;
+
+}
+
+input[id*="_sad"]
+{
+  border-color: orange;
+  border-width: 3px;
+}
+
+
+input[id*="_juv"]
+{
+  border-color: orange;
+  border-width: 3px;
+}
+
+
+input[id*="_imm"]
+{
+  border-color: orange;
+  border-width: 3px;
+}
+
+
+input[id*="_pull"]
+{
+  border-color: orange;
+  border-width: 3px;
+}
+
+
+#sf_fieldset_detail table th label[for*="_about"]
+{
+  background-color: lightgray;
+  margin: 0px;
+  float: right;
+}
+
+#sf_fieldset_detail table th label[for*="unknown"]
+{
+  background-color: lightgray;
+  margin: 0px;
+  float: right;
+
+}
+
+
+
+
+#sf_fieldset_detail table th label[for*="_female"]
+{
+  background-color: #FF2B2B;
+  color: white;
+  margin: 0px;
+}
+
+#sf_fieldset_detail table th label[for*="_male"]
+{
+  background-color: lightblue;
+  margin: 0px;
+}
+
+#sf_fieldset_detail table th label[for*="_sad"]
+{
+  background-color: orange;
+  margin: 0px;
+}
+
+#sf_fieldset_detail table th label[for*="_add"]
+{
+  background-color: orange;
+  margin: 0px;
+}
+
+#sf_fieldset_detail table th label[for*="_imm"]
+{
+  background-color: orange;
+  margin: 0px;
+}
+
+#sf_fieldset_detail table th label[for*="_pull"]
+{
+  background-color: orange;
+  margin: 0px;
+}
+
+#sf_fieldset_detail table th label[for*="_juv"]
+{
+  background-color: orange;
+  margin: 0px;
+}
+
+.sf_admin_list_th_lkpzoochar
+{
+  width: 45px;
+  overflow: auto;
+}
+
+.sf_admin_list_th_nestseason_flyedjungs
+{
+  width: 45px;
+  word-wrap: break-word; 
+  overflow: auto;
+}
+
+.sf_admin_kratkynadpis
+{
+  width: 45px;
+  word-wrap: break-word; 
+  overflow: auto;
+}
+.sf_admin_strednynadpis
+{
+  width: 70px;
+  word-wrap: break-word; 
+  overflow: auto;
+}
+
+
+.sf_admin_list_th_lkplocalities_description 
+{
+  width: 160px;
+}
+
+.sf_admin_list_th_gis
+{
+  width: 120px;
+}
+
+.sf_admin_list_th_nestseason_description
+{
+  width: 160px;
+
+}
+
+.more {
+    display:none;
+}
+
+#box .show-more:checked + .more {
+    display:block;
+}
+
+.skrtackatbl
+{
+    border-collapse: collapse;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    border-spacing: 0;
+    border: none;
+}
+
+.skrtackatbl th
+{
+    border-collapse: collapse; 
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    text-align: center;
+}
+
+.skrtackatbl td
+{
+    border-collapse: collapse; 
+    margin: 0 0 0 0;
+    padding: 0 0 0 0; 
+    
+}
+
+#nobordertable table {
+  background-color: transparent;
+  border: none;
+  border-collapse: collapse;
+
+}
+
+#nobordertable th {
+  background-color: #F5FFE6;
+  border: none;
+  border-collapse: collapse;
+  font-size: 1.7em;
+
+}
+
+#nobordertable td {
+  background-color: #F5FFE6;
+  border: none;
+  border-collapse: collapse;
+  font-size: 1.1em;
+}
+
+#editing 
+{
+  font-size: 1.1em;
+  color: red;
+  background-color: yellow;
+  max-width: 700px; 
+}
+
+

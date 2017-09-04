@@ -1,0 +1,1217 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="tableShow">
+<table>
+  <tr>
+    <th rowspan="2" width="340px">Lokalita</th><th>dátum</th><th colspan="3" >začína šero</th><th rowspan="2" >východ Slnka</th><th rowspan="2" >západ Slnka</th><th colspan="3" >končí šero</th><th width="280px">fáza Mesiaca</th>
+  </tr>
+  <tr>
+    <th >{{ datum }}</th><th>astronom.</th><th>nautické</th><th>občianske</th><th>občianske</th><th>nautické</th><th>astronom.</th><th colspan="5"> {{ attribute(aPomMoon, 'desc') }} </th>
+  </tr>
+  <tr>
+   <td><span class="flag-icon flag-icon-sk"></span> Slovenská republika  </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+   <td>
+    <strong>NP Poloniny (Stužica), východný cíp SK</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomPo, 'astronomical_twilight_begin')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+     {{ attribute(aPomPo, 'nautical_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomPo, 'civil_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomPo, 'sunrise')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomPo, 'sunset')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomPo, 'civil_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomPo, 'nautical_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomPo, 'astronomical_twilight_end')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomPo, 'lat'), 'lng' : attribute(aPomPo, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomPo, 'lat') }}  {{ attribute(aPomPo, 'lng') }}) 
+   </td>
+  </tr>
+  <tr class="even" >
+   <td >
+    <strong>Východoslovenská nížina</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomVn, 'astronomical_twilight_begin')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+     {{ attribute(aPomVn, 'nautical_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomVn, 'civil_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomVn, 'sunrise')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomVn, 'sunset')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomVn, 'civil_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomVn, 'nautical_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomVn, 'astronomical_twilight_end')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomVn, 'lat'), 'lng' : attribute(aPomVn, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomVn, 'lat') }}  {{ attribute(aPomVn, 'lng') }}) 
+   </td>
+
+  </tr>
+  <tr>
+   <td>
+    <strong>Čergov</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomCe, 'astronomical_twilight_begin')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+     {{ attribute(aPomCe, 'nautical_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomCe, 'civil_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomCe, 'sunrise')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomCe, 'sunset')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomCe, 'civil_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomCe, 'nautical_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomCe, 'astronomical_twilight_end')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomCe, 'lat'), 'lng' : attribute(aPomCe, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomCe, 'lat') }}  {{ attribute(aPomCe, 'lng') }}) 
+   </td>
+  </tr>
+  <tr class="even" >
+   <td>
+    <strong>Slovenské rudohorie (Kamenný hrb)</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomVoK, 'astronomical_twilight_begin')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+     {{ attribute(aPomVoK, 'nautical_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomVoK, 'civil_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomVoK, 'sunrise')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomVoK, 'sunset')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomVoK, 'civil_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomVoK, 'nautical_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomVoK, 'astronomical_twilight_end')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomVoK, 'lat'), 'lng' : attribute(aPomVoK, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomVoK, 'lat') }}  {{ attribute(aPomVoK, 'lng') }}) 
+   </td>
+  </tr>
+
+  <tr>
+   <td>
+    <strong>Slovenské rudohorie (Volovec)</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomVo, 'astronomical_twilight_begin')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+     {{ attribute(aPomVo, 'nautical_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomVo, 'civil_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomVo, 'sunrise')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomVo, 'sunset')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomVo, 'civil_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomVo, 'nautical_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomVo, 'astronomical_twilight_end')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomVo, 'lat'), 'lng' : attribute(aPomVo, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomVo, 'lat') }}  {{ attribute(aPomVo, 'lng') }}) 
+   </td>
+  </tr>
+
+  <tr class="even" >
+   <td>
+    <strong>NP Pieniny</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomPi, 'astronomical_twilight_begin')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+     {{ attribute(aPomPi, 'nautical_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomPi, 'civil_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomPi, 'sunrise')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomPi, 'sunset')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomPi, 'civil_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomPi, 'nautical_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomPi, 'astronomical_twilight_end')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomPi, 'lat'), 'lng' : attribute(aPomPi, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomPi, 'lat') }}  {{ attribute(aPomPi, 'lng') }}) 
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <strong>TANAP</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomTa, 'astronomical_twilight_begin')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+     {{ attribute(aPomTa, 'nautical_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomTa, 'civil_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomTa, 'sunrise')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomTa, 'sunset')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomTa, 'civil_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomTa, 'nautical_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomTa, 'astronomical_twilight_end')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomTa, 'lat'), 'lng' : attribute(aPomTa, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomTa, 'lat') }}  {{ attribute(aPomTa, 'lng') }}) 
+   </td>
+  </tr>
+  <tr class="even" >
+   <td>
+    <strong>NP Slovenský raj</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomSr, 'astronomical_twilight_begin')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+     {{ attribute(aPomSr, 'nautical_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomSr, 'civil_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomSr, 'sunrise')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomSr, 'sunset')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomSr, 'civil_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomSr, 'nautical_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomSr, 'astronomical_twilight_end')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomSr, 'lat'), 'lng' : attribute(aPomSr, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomSr, 'lat') }}  {{ attribute(aPomSr, 'lng') }}) 
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <strong>NAPANT</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomNa, 'astronomical_twilight_begin')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+     {{ attribute(aPomNa, 'nautical_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomNa, 'civil_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomNa, 'sunrise')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomNa, 'sunset')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomNa, 'civil_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomNa, 'nautical_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomNa, 'astronomical_twilight_end')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomNa, 'lat'), 'lng' : attribute(aPomNa, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomNa, 'lat') }}  {{ attribute(aPomNa, 'lng') }}) 
+   </td>
+  </tr>
+  <tr class="even" >
+   <td>
+    <strong>NP Malá Fatra</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomMf, 'astronomical_twilight_begin')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+     {{ attribute(aPomMf, 'nautical_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomMf, 'civil_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomMf, 'sunrise')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomMf, 'sunset')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomMf, 'civil_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomMf, 'nautical_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomMf, 'astronomical_twilight_end')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomMf, 'lat'), 'lng' : attribute(aPomMf, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomMf, 'lat') }}  {{ attribute(aPomMf, 'lng') }}) 
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <strong>Babia hora/gora (Orava),  <span class="flag-icon flag-icon-sk"></span>  /  <span class="flag-icon flag-icon-pl"></span></strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomOr, 'astronomical_twilight_begin')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+     {{ attribute(aPomOr, 'nautical_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomOr, 'civil_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomOr, 'sunrise')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomOr, 'sunset')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomOr, 'civil_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomOr, 'nautical_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomOr, 'astronomical_twilight_end')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomOr, 'lat'), 'lng' : attribute(aPomOr, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomOr, 'lat') }}  {{ attribute(aPomOr, 'lng') }}) 
+   </td>
+  </tr>
+  <tr class="even" >
+   <td>
+    <strong>CHKO Poľana</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomPl, 'astronomical_twilight_begin')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+     {{ attribute(aPomPl, 'nautical_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomPl, 'civil_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomPl, 'sunrise')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomPl, 'sunset')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomPl, 'civil_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomPl, 'nautical_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomPl, 'astronomical_twilight_end')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomPl, 'lat'), 'lng' : attribute(aPomPl, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomPl, 'lat') }}  {{ attribute(aPomPl, 'lng') }}) 
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <strong>NP Muránska planina</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomMp, 'astronomical_twilight_begin')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+     {{ attribute(aPomMp, 'nautical_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomMp, 'civil_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomMp, 'sunrise')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomMp, 'sunset')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomMp, 'civil_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomMp, 'nautical_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomMp, 'astronomical_twilight_end')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomMp, 'lat'), 'lng' : attribute(aPomMp, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomMp, 'lat') }}  {{ attribute(aPomMp, 'lng') }}) 
+   </td>
+  </tr>
+  <tr class="even" >
+   <td>
+    <strong>NP Slovenský kras, Dievčenská skala</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomSk, 'astronomical_twilight_begin')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+     {{ attribute(aPomSk, 'nautical_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomSk, 'civil_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomSk, 'sunrise')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomSk, 'sunset')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomSk, 'civil_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomSk, 'nautical_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomSk, 'astronomical_twilight_end')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomSk, 'lat'), 'lng' : attribute(aPomSk, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomSk, 'lat') }}  {{ attribute(aPomSk, 'lng') }}) 
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <strong>CHKO Cerová vrchovina</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomCv, 'astronomical_twilight_begin')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+     {{ attribute(aPomCv, 'nautical_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomCv, 'civil_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomCv, 'sunrise')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomCv, 'sunset')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomCv, 'civil_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomCv, 'nautical_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomCv, 'astronomical_twilight_end')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomCv, 'lat'), 'lng' : attribute(aPomCv, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomCv, 'lat') }}  {{ attribute(aPomCv, 'lng') }}) 
+   </td>
+  </tr>
+  <tr class="even" >
+   <td>
+    <strong>Dunaj Burda</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomBu, 'astronomical_twilight_begin')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+     {{ attribute(aPomBu, 'nautical_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomBu, 'civil_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomBu, 'sunrise')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomBu, 'sunset')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomBu, 'civil_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomBu, 'nautical_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomBu, 'astronomical_twilight_end')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomBu, 'lat'), 'lng' : attribute(aPomBu, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomBu, 'lat') }}  {{ attribute(aPomBu, 'lng') }}) 
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <strong>Váh, Listové Jazero, Kolárovo</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomLi, 'astronomical_twilight_begin')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+     {{ attribute(aPomLi, 'nautical_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomLi, 'civil_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomLi, 'sunrise')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomLi, 'sunset')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomLi, 'civil_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomLi, 'nautical_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomLi, 'astronomical_twilight_end')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomLi, 'lat'), 'lng' : attribute(aPomLi, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomLi, 'lat') }}  {{ attribute(aPomLi, 'lng') }}) 
+   </td>
+  </tr>
+  <tr class="even" >
+   <td>
+    <strong>Chko Ponitrie, Tríbeč, Michalov vrch</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomNi, 'astronomical_twilight_begin')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+     {{ attribute(aPomNi, 'nautical_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomNi, 'civil_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomNi, 'sunrise')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomNi, 'sunset')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomNi, 'civil_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomNi, 'nautical_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomNi, 'astronomical_twilight_end')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomNi, 'lat'), 'lng' : attribute(aPomNi, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomNi, 'lat') }}  {{ attribute(aPomNi, 'lng') }}) 
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <strong>Žitný ostrov, Horná Potôň</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPom, 'astronomical_twilight_begin')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+     {{ attribute(aPom, 'nautical_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPom, 'civil_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPom, 'sunrise')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPom, 'sunset')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPom, 'civil_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPom, 'nautical_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPom, 'astronomical_twilight_end')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPom, 'lat'), 'lng' : attribute(aPom, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPom, 'lat') }}  {{ attribute(aPom, 'lng') }}) 
+   </td>
+  </tr>
+  <tr class="even" >
+   <td>
+    <strong>NPR Horný les, západný cíp  <span class="flag-icon flag-icon-sk"></span>  /  <span class="flag-icon flag-icon-at"></span></strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomZv, 'astronomical_twilight_begin')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+     {{ attribute(aPomZv, 'nautical_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomZv, 'civil_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomZv, 'sunrise')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomZv, 'sunset')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomZv, 'civil_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomZv, 'nautical_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomZv, 'astronomical_twilight_end')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomZv, 'lat'), 'lng' : attribute(aPomZv, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomZv, 'lat') }}  {{ attribute(aPomZv, 'lng') }}) 
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <strong>Soutok Dyje/Morava (CHKO Záhorie) <span class="flag-icon flag-icon-sk"></span>  /  <span class="flag-icon flag-icon-at"></span> / <span class="flag-icon flag-icon-cz"></span></strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomSou, 'astronomical_twilight_begin')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+     {{ attribute(aPomSou, 'nautical_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomSou, 'civil_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomSou, 'sunrise')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomSou, 'sunset')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomSou, 'civil_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomSou, 'nautical_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomSou, 'astronomical_twilight_end')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomSou, 'lat'), 'lng' : attribute(aPomSou, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomSou, 'lat') }}  {{ attribute(aPomSou, 'lng') }}) 
+   </td>
+  </tr>
+  <tr>
+   <td><span class="flag-icon flag-icon-cz"></span> Česká republika </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+  <tr>
+   <td>
+    <strong>CHKO Beskydy (východ CZ)</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomBe, 'astronomical_twilight_begin')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+     {{ attribute(aPomBe, 'nautical_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomBe, 'civil_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomBe, 'sunrise')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomBe, 'sunset')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomBe, 'civil_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomBe, 'nautical_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomBe, 'astronomical_twilight_end')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomBe, 'lat'), 'lng' : attribute(aPomBe, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomBe, 'lat') }}  {{ attribute(aPomBe, 'lng') }}) 
+   </td>
+  </tr>
+  <tr class="even" >
+   <td>
+    <strong>CHKO Bílé/Biele Karpaty, Malý Lopeník <span class="flag-icon flag-icon-cz"></span> / <span class="flag-icon flag-icon-sk"></span></strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomBk, 'astronomical_twilight_begin')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+     {{ attribute(aPomBk, 'nautical_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomBk, 'civil_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomBk, 'sunrise')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomBk, 'sunset')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomBk, 'civil_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomBk, 'nautical_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomBk, 'astronomical_twilight_end')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomBk, 'lat'), 'lng' : attribute(aPomBk, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomBk, 'lat') }}  {{ attribute(aPomBk, 'lng') }}) 
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <strong>CHKO Slavkovský les (západný cíp CZ)</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomSla, 'astronomical_twilight_begin')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+     {{ attribute(aPomSla, 'nautical_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomSla, 'civil_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomSla, 'sunrise')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomSla, 'sunset')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomSla, 'civil_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomSla, 'nautical_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomSla, 'astronomical_twilight_end')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomSla, 'lat'), 'lng' : attribute(aPomSla, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomSla, 'lat') }}  {{ attribute(aPomSla, 'lng') }}) 
+   </td>
+  </tr>
+  <tr class="even" >
+   <td>
+    <strong>NP Šumava/Bayerischer Wald (Moorkopf) <span class="flag-icon flag-icon-cz"></span>  /  <span class="flag-icon flag-icon-de"></span></strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomSum, 'astronomical_twilight_begin')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+     {{ attribute(aPomSum, 'nautical_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomSum, 'civil_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomSum, 'sunrise')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomSum, 'sunset')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomSum, 'civil_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomSum, 'nautical_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomSum, 'astronomical_twilight_end')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomSum, 'lat'), 'lng' : attribute(aPomSum, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomSum, 'lat') }}  {{ attribute(aPomSum, 'lng') }}) 
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <strong>Vysočina - Javořice</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomVys, 'astronomical_twilight_begin')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+     {{ attribute(aPomVys, 'nautical_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomVys, 'civil_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomVys, 'sunrise')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomVys, 'sunset')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomVys, 'civil_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomVys, 'nautical_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomVys, 'astronomical_twilight_end')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomVys, 'lat'), 'lng' : attribute(aPomVys, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomVys, 'lat') }}  {{ attribute(aPomVys, 'lng') }}) 
+   </td>
+  </tr>
+  <tr class="even" >
+   <td>
+    <strong>Vysočina - Žďárské vrchy</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomVyz, 'astronomical_twilight_begin')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+     {{ attribute(aPomVyz, 'nautical_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomVyz, 'civil_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomVyz, 'sunrise')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomVyz, 'sunset')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomVyz, 'civil_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomVyz, 'nautical_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomVyz, 'astronomical_twilight_end')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomVyz, 'lat'), 'lng' : attribute(aPomVyz, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomVyz, 'lat') }}  {{ attribute(aPomVyz, 'lng') }}) 
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <strong>Brdy</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomBr, 'astronomical_twilight_begin')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+     {{ attribute(aPomBr, 'nautical_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomBr, 'civil_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomBr, 'sunrise')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomBr, 'sunset')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomBr, 'civil_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomBr, 'nautical_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomBr, 'astronomical_twilight_end')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomBr, 'lat'), 'lng' : attribute(aPomBr, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomBr, 'lat') }}  {{ attribute(aPomBr, 'lng') }}) 
+   </td>
+  </tr>
+  <tr class="even" >
+   <td>
+    <strong>Krušné hory - Loučná</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomKr, 'astronomical_twilight_begin')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+     {{ attribute(aPomKr, 'nautical_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomKr, 'civil_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomKr, 'sunrise')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomKr, 'sunset')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomKr, 'civil_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomKr, 'nautical_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomKr, 'astronomical_twilight_end')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomKr, 'lat'), 'lng' : attribute(aPomKr, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomKr, 'lat') }}  {{ attribute(aPomKr, 'lng') }}) 
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <strong>Jizerské hory - Jizera</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomJi, 'astronomical_twilight_begin')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+     {{ attribute(aPomJi, 'nautical_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomJi, 'civil_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomJi, 'sunrise')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomJi, 'sunset')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomJi, 'civil_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomJi, 'nautical_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomJi, 'astronomical_twilight_end')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomJi, 'lat'), 'lng' : attribute(aPomJi, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomJi, 'lat') }}  {{ attribute(aPomJi, 'lng') }}) 
+   </td>
+  </tr>
+  <tr class="even" >
+   <td>
+    <strong>Krkonoše - Sněžka  <span class="flag-icon flag-icon-cz"></span>  /  <span class="flag-icon flag-icon-pl"></span></strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomSn, 'astronomical_twilight_begin')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+     {{ attribute(aPomSn, 'nautical_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomSn, 'civil_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomSn, 'sunrise')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomSn, 'sunset')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomSn, 'civil_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomSn, 'nautical_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomSn, 'astronomical_twilight_end')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomSn, 'lat'), 'lng' : attribute(aPomSn, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomSn, 'lat') }}  {{ attribute(aPomSn, 'lng') }}) 
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <strong>Orlické hory - Deštná  <span class="flag-icon flag-icon-cz"></span>  /  <span class="flag-icon flag-icon-pl"></span></strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomDe, 'astronomical_twilight_begin')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+     {{ attribute(aPomDe, 'nautical_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomDe, 'civil_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomDe, 'sunrise')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomDe, 'sunset')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomDe, 'civil_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomDe, 'nautical_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomDe, 'astronomical_twilight_end')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomDe, 'lat'), 'lng' : attribute(aPomDe, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomDe, 'lat') }}  {{ attribute(aPomDe, 'lng') }}) 
+   </td>
+  </tr>
+  <tr class="even" >
+   <td>
+    <strong>Jeseníky - Praděd </strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomJe, 'astronomical_twilight_begin')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+     {{ attribute(aPomJe, 'nautical_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomJe, 'civil_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomJe, 'sunrise')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomJe, 'sunset')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomJe, 'civil_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomJe, 'nautical_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomJe, 'astronomical_twilight_end')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomJe, 'lat'), 'lng' : attribute(aPomJe, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomJe, 'lat') }}  {{ attribute(aPomJe, 'lng') }}) 
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <strong>Drahanská vrchovina - Skalky </strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomDr, 'astronomical_twilight_begin')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+     {{ attribute(aPomDr, 'nautical_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomDr, 'civil_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomDr, 'sunrise')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomDr, 'sunset')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomDr, 'civil_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomDr, 'nautical_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomDr, 'astronomical_twilight_end')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomDr, 'lat'), 'lng' : attribute(aPomDr, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomDr, 'lat') }}  {{ attribute(aPomDr, 'lng') }}) 
+   </td>
+  </tr>
+  <tr class="even" >
+   <td>
+    <strong>Ralsko - Bezděz </strong>
+   </td>
+   <td>
+   </td>
+   <td>
+     {{ attribute(aPomRa, 'astronomical_twilight_begin')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+     {{ attribute(aPomRa, 'nautical_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomRa, 'civil_twilight_begin')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomRa, 'sunrise')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPomRa, 'sunset')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomRa, 'civil_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomRa, 'nautical_twilight_end')|date('H:i:s','Europe/Prague') }} 
+   </td>
+   <td>
+     {{ attribute(aPomRa, 'astronomical_twilight_end')|date('H:i:s','Europe/Prague') }}
+   </td>
+   <td>
+       <a href="{{ path( 'jedenbod', { 'lat' : attribute(aPomRa, 'lat'), 'lng' : attribute(aPomRa, 'lng')  } ) }}">Spracuj podrobnejšie</a>  ({{ attribute(aPomRa, 'lat') }}  {{ attribute(aPomRa, 'lng') }}) 
+   </td>
+  </tr>
+</table>
+</div>
+     <br />
+     <br />
+
+     {{ piwik_code() }}
+{% endblock %}
+

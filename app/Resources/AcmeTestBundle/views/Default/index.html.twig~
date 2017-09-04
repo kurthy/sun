@@ -1,0 +1,26 @@
+{% extends "OhGoogleMapFormTypeBundle:Form:google_maps.html.twig" %}
+{% block oh_google_maps_callback %}
+  {% block oh_google_maps_fields %} 
+
+  {{ form_start(form, {'action' : path('acm' ) }) }} 
+  {{ form_errors(form) }}
+  <center>
+    {% for child in form %}
+      {{ form_row(child) }}
+    {% endfor %}
+  </center>
+  {{ form_end(form) }}
+
+  {% endblock %} 
+
+  <script type="text/javascript">
+    var oh_google_maps_callback = function(location, gmap){
+    // logs to the console your new latitude
+    //test	alert(location.lat());
+	console.log('Your new latitude is: '+location.lat());
+   }
+  </script>	
+{{ piwik_code() }}
+
+{% endblock %} 
+

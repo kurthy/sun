@@ -1,0 +1,54 @@
+{% block doctype %}
+<!DOCTYPE html>
+{% endblock %}
+
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Západy a východy Slnka SK/CZ/PL{% endblock %}</title>
+        {% block stylesheets %}
+          <link rel="stylesheet" href="{{ asset('free-css-drop-down-menu/css/dropdown/dropdown.css') }}" />
+          <link rel="stylesheet" href="{{ asset('free-css-drop-down-menu/css/themes/default/default.css') }}" />
+          <link rel="stylesheet" href="{{ asset('css/flag-icon.css') }}" />
+          <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
+        {% endblock %}
+        {% block javascripts %}
+          <script src="{{ asset('free-css-drop-down-menu/js/jquery/jquery.dropdown.js') }}"></script>
+        {% endblock %}
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body class="telo">
+         <div id="wrappermenu">
+         <div id="menu">
+          <ul id="nav" class="dropdown dropdown-horizontal">
+          <li><a href="{{ path('homepage') }}">Vybrané lokality SK a CZ</a></li>
+          <li><a href="{{ path('acm') }}">Vyberte si vlastnú lokalitu </a> </li>
+          <li><a href="http://www.e-svet.biz">Iné služby, kontakt.. </a> </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content">
+    {% block body %}
+
+{% endblock %}
+    </div> 
+
+{% block oh_google_maps_widget %}
+{% endblock %}
+
+
+
+     {% block foot %}
+          <div id="foot">
+            <span>Welcome to</span> Symfony {{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION') }}
+            {# <code>{{ base_dir }}</code> #}
+            
+          | Obrázky fáz mesiaca: <a href="https://commons.wikimedia.org/wiki/File:Mond_Phasen.jpg#file">by Horst Frank, Creative Commons Attribution-Share Alike 3.0 Unported</a>
+
+          </div>
+     {% endblock %}
+    </body>
+
+</html>

@@ -1,0 +1,119 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="tableShow">
+<table>
+  <tr>
+    <th rowspan="2" width="200px">Lokalita</th><th>dátum</th><th colspan="3" >začína šero</th><th rowspan="2" >východ Slnka</th><th rowspan="2" >západ Slnka</th><th colspan="3" >končí šero</th><th colspan="3">fáza Mesiaca</th>
+  </tr>
+  <tr>
+    <th></th><th>astronom.</th><th>nautické</th><th>občianske</th><th>občianske</th><th>nautické</th><th>astronom.</th><th>  </th>
+  </tr>
+  <tr>
+   <td>
+	   <strong>Váš bod: {{ lat }} {{ lng }}  </strong>
+   </td>
+   <td>
+      <strong>{{ datum }}</strong>
+   </td>
+   <td>
+     {{ attribute(aPom, 'astronomical_twilight_begin')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+     {{ attribute(aPom, 'nautical_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPom, 'civil_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo">
+     {{ attribute(aPom, 'sunrise')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo" >
+     {{ attribute(aPom, 'sunset')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPom, 'civil_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPom, 'nautical_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPom, 'astronomical_twilight_end')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+     {{ attribute(aPomMoon,'desc') }}
+   </td>
+   <td>
+     {{ attribute(aPomMoon,'phaseNr') }}
+   </td>
+   <td>
+    <img src="{{ asset('images/Mond_Phasen'~  attribute(aPomMoon,'phaseNr') ~'.jpg')  }}" height="22" />  
+   </td>
+
+  </tr>
+  {% for aPomCyk in aPomDalsie %}
+      <tr  class="{% if loop.index is divisible by(2) %}even{% else %}odd{% endif %}" >
+   <td>
+	   <strong></strong>
+   </td>
+   <td>
+	   <strong>{{  attribute(tPomDalsie, loop.index )|date('d.m.Y','Europe/Bratislava') }}</strong>
+   </td>
+   <td> 
+     '{{ attribute(aPomCyk, 'astronomical_twilight_begin')|date('H:i:s','Europe/Bratislava') }}'
+   </td> 
+   <td>
+     {{ attribute(aPomCyk, 'nautical_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomCyk, 'civil_twilight_begin')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo">
+     {{ attribute(aPomCyk, 'sunrise')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td class="hrubo">
+     {{ attribute(aPomCyk, 'sunset')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomCyk, 'civil_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomCyk, 'nautical_twilight_end')|date('H:i:s','Europe/Bratislava') }} 
+   </td>
+   <td>
+     {{ attribute(aPomCyk, 'astronomical_twilight_end')|date('H:i:s','Europe/Bratislava') }}
+   </td>
+   <td>
+     {{ attribute(attribute(aPomMoonDalsie, loop.index),'desc') }}
+   </td>
+   <td>
+     {{ attribute(attribute(aPomMoonDalsie, loop.index),'phaseNr') }}
+   </td>
+   <td>
+      <img src="{{ asset('images/Mond_Phasen'~  attribute(attribute(aPomMoonDalsie, loop.index),'phaseNr') ~'.jpg')  }}" height="22" />  
+
+   </td>
+
+  </tr>
+
+{% endfor %}
+
+</table>
+<hr width="80%">
+<input type="button" onclick="location.href='{{ path('csvexport',{ 'lat' : lat, 'lng' : lng } ) }}'" value="Export tabuľky pre Excel (csv)">
+{#<input type="button" onclick="location.href='{{ path('csvexportyear',{ 'lat' : lat, 'lng' : lng } ) }}'" value="Export za celý rok pre Excel (csv)"> #}
+
+<input type="button" onclick="location.href='{{ path('amsrviniyear',{ 'lat' : lat, 'lng' : lng } ) }}'" value="Export celého roka ako AMSrv_slunce.ini">
+<input type="button" target="_new" onclick="window.open('{{ path('chart',{ 'lat' : lat, 'lng' : lng } ) }}')" value="Zobraz graf východu slnka (v novej záložke)">
+
+<br />
+<a target="_new" href="http://e-ucet.o2.cz/docs/navod_csv2Excel.htm">Návod na import csv súboru do Excelu</a>
+
+
+</div>
+
+     <br />
+     <br />
+
+     {{ piwik_code() }}
+{% endblock %}
+

@@ -1,0 +1,215 @@
+<?php
+
+namespace AppBundle\Controller;
+
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
+
+class DefaultController extends Controller
+{
+    /**
+     * @Route("/", name="homepage")
+     */
+    public function indexAction(Request $request)
+    {
+
+	//moon phase
+        $timestamp = time();
+        $aPomMoon = $this->moon_phase(date('Y', $timestamp), date('n', $timestamp), date('j', $timestamp));
+
+
+	//Benková Potôň (3 km severne)
+	$aPom = date_sun_info(time(),48.06096,17.50437); 
+	//Východoslovenská nížina
+	$aPomVn = date_sun_info(time(),48.65959,22.03273); 
+	//Národný park Poloniny - Stužica (najvýchodnejší cip)
+	$aPomPo = date_sun_info(time(),48.08368,22.5381); 
+	//pohorie Čergov pri Bardejove
+	$aPomCe = date_sun_info(time(),49.22671,21.10644); 
+	//NP Pieniny
+	$aPomPi = date_sun_info(time(),49.39436,20.45413); 
+	//TANAP
+	$aPomTa = date_sun_info(time(),49.17855,19.9739); 
+	//Slovenské Rudohorie, Volovské vrchy, Volovec
+	$aPomVo = date_sun_info(time(),49.74712,20.56716); 
+	//NP Slovenský Kras, planina pri Hačave 
+	$aPomSk = date_sun_info(time(),48.65785,20.9146); 
+	//Slovenské Rudohorie, Volovské vrchy, Kamenný hrb
+	$aPomVoK = date_sun_info(time(),48.75131,21.17158); 
+	//NP Slovenský raj  
+	$aPomSr = date_sun_info(time(),48.91087,20.35018); 
+	//NP Muránska planina 
+	$aPomMp = date_sun_info(time(),48.76037,19.99175); 
+	//NAPANT 
+	$aPomNa = date_sun_info(time(),48.95463,19.69237); 
+	//CHKO Poľana 
+	$aPomPl = date_sun_info(time(),48.65615,19.48775); 
+	//CHKO Cerová vrchovina 
+	$aPomCv = date_sun_info(time(),48.20442,19.9224); 
+	//Dunaj - Burda 
+	$aPomBu = date_sun_info(time(),47.83908,18.786); 
+	//Váh, Listové jazero  
+	$aPomLi = date_sun_info(time(),47.89366,18.03447); 
+	//Ponitrie, Tríbeč, Michalov vrch  
+	$aPomNi = date_sun_info(time(),48.55569,18.41109); 
+	//NP Malá Fatra  
+	$aPomMf = date_sun_info(time(),49.19561,19.0447); 
+	//Orava, Babia hora  
+	$aPomOr = date_sun_info(time(),49.57320,19.52912); 
+	//NPR Horný les, Angern/Záhorská Ves, západný cíp   
+	$aPomZv = date_sun_info(time(),48.35601,16.86151); 
+
+	//CHKO Beskydy   
+	$aPomBe = date_sun_info(time(),49.44629,18.40198); 
+	//CHKO Biele / Bílé Karpaty, Malý Lopeník   
+	$aPomBk = date_sun_info(time(),48.92513,17.78151); 
+	//Soutok Dyje/Morava (CHKO Záhorie, SK/CZ/AT)  
+	$aPomSou = date_sun_info(time(),48.61718,16.94029); 
+	//CHKO Slavkovský les (západný cíp CZ)  
+	$aPomSla = date_sun_info(time(),50.06302,12.70145); 
+	//NP Šumava (Moorkopf)  
+	$aPomSum = date_sun_info(time(),48.96899,13.5074); 
+
+
+
+
+        // replace this example code with whatever you need
+        return $this->render('default/index.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
+	    'aPom' => $aPom,
+	    'aPomVn' => $aPomVn,
+	    'aPomPo' => $aPomPo,
+	    'aPomCe' => $aPomCe,
+	    'aPomPi' => $aPomPi,
+	    'aPomTa' => $aPomTa,
+	    'aPomVo' => $aPomVo,
+	    'aPomSk' => $aPomSk,
+	    'aPomVoK' => $aPomVoK,
+	    'aPomSr' => $aPomSr,
+	    'aPomMp' => $aPomMp,
+	    'aPomNa' => $aPomNa,
+	    'aPomPl' => $aPomPl,
+	    'aPomCv' => $aPomCv,
+	    'aPomBu' => $aPomBu,
+	    'aPomLi' => $aPomLi,
+	    'aPomNi' => $aPomNi,
+	    'aPomMf' => $aPomMf,
+	    'aPomOr' => $aPomOr,
+	    'aPomZv' => $aPomZv,
+	    'aPomBe' => $aPomBe,
+	    'aPomBk' => $aPomBk,
+	    'aPomSou' => $aPomSou,
+	    'aPomSla' => $aPomSla,
+	    'aPomSum' => $aPomSum,
+	    'datum' => date('d.m.Y',time()),
+	    'aPomMoon' => $aPomMoon,
+        ]);
+    }
+
+    public function moon_phase($year, $month, $day)
+    {
+
+	/*
+
+	modified from http://www.voidware.com/moon_phase.htm
+
+	*/
+
+	$c = $e = $jd = $b = 0;
+
+	if ($month < 3)
+
+	{
+
+		$year--;
+
+		$month += 12;
+
+	}
+
+	++$month;
+
+	$c = 365.25 * $year;
+
+	$e = 30.6 * $month;
+
+	$jd = $c + $e + $day - 694039.09;	//jd is total days elapsed
+
+	$jd /= 29.5305882;					//divide by the moon cycle
+
+	$b = (int) $jd;						//int(jd) -> b, take integer part of jd
+
+	$jd -= $b;							//subtract integer part to leave fractional part of original jd
+
+	$b = round($jd * 8);				//scale fraction from 0-8 and round
+
+	if ($b >= 8 )
+
+	{
+
+		$b = 0;//0 and 8 are the same so turn 8 into 0
+
+	}
+
+	switch ($b)
+
+	{
+
+		case 0:
+
+			return 'Nov (en: New Moon)';
+
+			break;
+
+		case 1:
+
+			return 'Dorastajúci úzky kosáčik (en: Waxing Crescent Moon)';
+
+			break;
+
+		case 2:
+
+			return 'Prvá štvrť, dorastajúci polmesiac (en: Quarter Moon)';
+
+			break;
+
+		case 3:
+
+			return 'Dorastajúci pred splnom (en: Waxing Gibbous Moon)';
+
+			break;
+
+		case 4:
+
+			return 'Úplnok, spln (en: Full Moon)';
+
+			break;
+
+		case 5:
+
+			return 'Zmenšujúci sa po splne (en: Waning Gibbous Moon)';
+
+			break;
+
+		case 6:
+
+			return 'Posledná štvrť, zmenšujúci sa polmesiac (en: Last Quarter Moon)';
+
+			break;
+
+		case 7:
+
+			return 'Zmenšujúci sa úzky kosáčik (en: Waning Crescent Moon)';
+
+			break;
+
+		default:
+
+			return 'Error';
+
+	}
+
+  }
+    
+}

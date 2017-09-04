@@ -1,0 +1,5 @@
+twig:
+        form:
+            resources:
+                # This uses the default - you can put your own one here
+                - 'OhGoogleMapFormTypeBundle:Form:fields.html.twig' 

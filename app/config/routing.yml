@@ -1,0 +1,16 @@
+oh_google_map_form_type:
+    resource: "@OhGoogleMapFormTypeBundle/Controller/"
+    type:     annotation
+    prefix:   /googlemapform
+
+acme_test:
+    resource: "@AcmeTestBundle/Controller/"
+    type:     annotation
+    prefix:   /acm
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+
